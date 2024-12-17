@@ -1,0 +1,25 @@
+# ninja log v6
+29	744	7538824749213081	CMakeFiles/Proiect.dir/Results/Result.cpp.obj	7bb6af281a240447
+8	928	7540686804524434	CMakeFiles/Proiect.dir/main.cpp.obj	b8330d1689a5851d
+23	1954	7540683217662064	CMakeFiles/Proiect.dir/MemoryTests/MatrixTest.cpp.obj	9367b56c240d4147
+929	1071	7540686813732928	Proiect.exe	b2a1bc45e10f7611
+16	768	7538832381986125	CMakeFiles/Proiect.dir/Results/ResultLogger.cpp.obj	428654f8d9d5ec03
+27	876	7540683217702920	CMakeFiles/Proiect.dir/MemoryTests/TestRunnerMat.cpp.obj	f5ef32f43a1a1418
+27	1557	7538883357890808	CMakeFiles/Proiect.dir/MemoryTests/VectorTest.cpp.obj	c707a761134b0eee
+57	970	7538824749486184	CMakeFiles/Proiect.dir/MemoryTests/TestRunnerVec.cpp.obj	786947c4bc98da5
+3	276	7540724052941845	build.ninja	aaf07dc8775390e5
+9	964	7540724987972680	CMakeFiles/Proiect.dir/main.cpp.obj	b8330d1689a5851d
+17	1053	7540724988053435	CMakeFiles/Proiect.dir/MemoryTests/TestRunner.cpp.obj	f15be35a667d377b
+1053	1393	7540724998418800	Proiect.exe	bd1e8925523fc5f0
+7	932	7540725894615504	CMakeFiles/Proiect.dir/MemoryTests/TestRunner.cpp.obj	f15be35a667d377b
+932	1089	7540725903866926	Proiect.exe	bd1e8925523fc5f0
+6	875	7540726472517783	CMakeFiles/Proiect.dir/main.cpp.obj	b8330d1689a5851d
+875	1041	7540726481201636	Proiect.exe	bd1e8925523fc5f0
+23	696	7540744861920311	CMakeFiles/Proiect.dir/MemoryTests/TestRunner.cpp.obj	f15be35a667d377b
+696	831	7540744868639422	Proiect.exe	bd1e8925523fc5f0
+23	1427	7540752584321802	CMakeFiles/Proiect.dir/MemoryTests/TestRunner.cpp.obj	f15be35a667d377b
+1427	1665	7540752598369124	Proiect.exe	bd1e8925523fc5f0
+5	785	7542748950778303	CMakeFiles/Proiect.dir/MemoryTests/TestRunner.cpp.obj	f15be35a667d377b
+785	1035	7542748958579310	Proiect.exe	bd1e8925523fc5f0
+17	692	7545179056696616	CMakeFiles/Proiect.dir/main.cpp.obj	b8330d1689a5851d
+693	846	7545179063447443	Proiect.exe	bd1e8925523fc5f0
