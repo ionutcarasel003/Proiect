@@ -1,4 +1,4 @@
 Test Name,Size,Execution Time (s),Transfer Rate
-Cache Test,16,0.00972797,1644.74
-Ram test,12288,23.1943,529.786
-Virtual Memory test,18432,59.444,310.074
+Cache Test,16,0.0018995,8423.27
+Ram test,12288,3.22972,3804.66
+Virtual Memory test,18432,41.0205,449.336

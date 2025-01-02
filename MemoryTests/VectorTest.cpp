@@ -6,25 +6,70 @@
 #include <chrono>
 #include <random>
 #include <vector>
+#include <thread>
 
 VectorTest::VectorTest(size_t vec_size, size_t rep):
 size(vec_size),repetitions(rep),time(0.0),
 vecA(vec_size),vecB(vec_size){
+    generateVec();
+}
+
+void VectorTest::generateVecTh(size_t start_id, size_t end_id) {
     std::random_device rand;
     std::mt19937 generate(rand());
-    std::uniform_int_distribution<int> distribution(1,100);
+    std::uniform_int_distribution<int> distribution(1, 100);
 
-    for(size_t i = 0; i<vec_size; i++){
+    for (size_t i = start_id; i < end_id; i++) {
         vecA[i] = distribution(generate);
         vecB[i] = 0;
     }
 }
 
-void VectorTest::vector_op() {
-    for(size_t j = 0; j<repetitions; j++) {
-        for (size_t i = 0; i < size; i++) {
+void VectorTest::generateVec() {
+    const size_t numThreads = 8;
+    std::vector<std::thread> threads;
+    size_t elementsPerThread = size / numThreads;
+    size_t extraElements = size % numThreads;
+
+    size_t current_id = 0;
+
+    for (size_t t = 0; t < numThreads; t++) {
+        size_t start_id = current_id;
+        size_t end_id = start_id + elementsPerThread + (t < extraElements ? 1 : 0);
+        threads.emplace_back(&VectorTest::generateVecTh, this, start_id, end_id);
+        current_id = end_id;
+    }
+
+    for (auto &thread : threads) {
+        thread.join();
+    }
+}
+
+void VectorTest::vector_opTh(size_t start_id, size_t end_id) {
+    for (size_t j = 0; j < repetitions; j++) {
+        for (size_t i = start_id; i < end_id; i++) {
             vecB[i] += vecA[i];
         }
+    }
+}
+
+void VectorTest::vector_op() {
+    const size_t numThreads = 8;
+    std::vector<std::thread> threads;
+    size_t elementsPerThread = size / numThreads;
+    size_t extraElements = size % numThreads;
+
+    size_t current_id = 0;
+
+    for (size_t t = 0; t < numThreads; t++) {
+        size_t start_id = current_id;
+        size_t end_id = start_id + elementsPerThread + (t < extraElements ? 1 : 0);
+        threads.emplace_back(&VectorTest::vector_opTh, this, start_id, end_id);
+        current_id = end_id;
+    }
+
+    for (auto &thread : threads) {
+        thread.join();
     }
 }
 

@@ -11,11 +11,14 @@
 
 class VectorTest {
 protected:
+    double time;
     size_t size;
     size_t repetitions;
     std::vector<int> vecA;
     std::vector<int> vecB;
-    double time;
+    void generateVec();
+    void generateVecTh(size_t start_id, size_t end_id);
+    void vector_opTh(size_t start_id, size_t end_id);
 public:
     VectorTest(size_t vec_size, size_t rep);
     void run_test();

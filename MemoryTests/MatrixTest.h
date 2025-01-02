@@ -16,6 +16,9 @@ protected:
     std::vector<std::vector<int>> matrixA;
     std::vector<std::vector<int>> matrixB;
     std::vector<std::vector<int>> matrixC;
+    void populateMatrix();
+    void populateMatrixTh(size_t startRow, size_t endRow);
+    void multiplyMatrixTh(size_t startRow, size_t endRow);
     double time;
 public:
     MatrixTest(size_t matrix_size, size_t repetitions);

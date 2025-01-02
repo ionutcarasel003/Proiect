@@ -2,10 +2,8 @@
 #include <cmath>
 #include <vector>
 
-#include "MemoryTests/MatrixTest.h"
 #include "Results/Result.h"
 #include "Results/ResultLogger.h"
-#include "MemoryTests/VectorTest.h"
 #include "MemoryTests/TestRunner.h"
 
 #define CACHE_1 262144
